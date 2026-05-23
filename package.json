@@ -1,0 +1,49 @@
+{
+  "name": "my-reader",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/dev-free.mjs",
+    "dev": "node scripts/dev.mjs",
+    "dev:free": "node scripts/dev-free.mjs && node scripts/dev.mjs",
+    "dev:lapdog": "node scripts/dev-lapdog.mjs",
+    "dev:all": "node scripts/dev-all.mjs",
+    "dev:all:lapdog": "node scripts/dev-all.mjs --lapdog",
+    "ports:check": "node scripts/ports-check.mjs",
+    "ports:clear": "node scripts/ports-clear.mjs",
+    "lapdog:start": "lapdog start",
+    "lapdog:stop": "lapdog stop",
+    "lapdog:status": "lapdog status",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "clickhouse:up": "node scripts/clickhouse-up.mjs",
+    "clickhouse:down": "docker compose down",
+    "fetch:anthropic": "npx tsx scripts/fetch-anthropic.ts"
+  },
+  "dependencies": {
+    "@clickhouse/client": "^1.18.5",
+    "@mozilla/readability": "^0.6.0",
+    "better-sqlite3": "^12.10.0",
+    "dd-trace": "^5.104.0",
+    "linkedom": "^0.18.12",
+    "nanoid": "^5.1.11",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "unpdf": "^1.6.2",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
